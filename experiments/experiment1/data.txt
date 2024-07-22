@@ -1,0 +1,8 @@
+9v battery as 30s -> 8mA 1.4V
+9v battery at 60s -> 8mA 1.7V
+
+Experiment included 5 capicitors in parrelle
+  2x 50V 47 mircoFarads
+  63V 47 mircoFarads
+  2x 50V MP104Z
+  
