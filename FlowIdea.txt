@@ -1,0 +1,3 @@
+A 9v battery keeps a set of capacitors charged
+When the command is triggered the capacitors dump into all memory holding peices of the Pi 
+Use a relay to trigger dump of power
