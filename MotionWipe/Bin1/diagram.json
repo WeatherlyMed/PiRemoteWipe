@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "The Bin - Hack Club",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "wokwi-pir-motion-sensor-0",
+      "top": -15.2,
+      "left": -180.18,
+      "attrs": {}
+    },
+    { "type": "SSD1306 ", "id": "SSD1306 -0", "top": 215, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-relay-module",
+      "id": "wokwi-relay-module-0",
+      "top": 221,
+      "left": -124.8,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 137.54,
+      "left": 125.03,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "wokwi-pir-motion-sensor-0:GND", "pico:GND.2", "black", [ "v0" ] ],
+    [ "wokwi-pir-motion-sensor-0:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "wokwi-pir-motion-sensor-0:VCC", "wokwi-relay-module-0:VCC", "red", [ "v211.2", "h-38.4" ] ],
+    [ "wokwi-relay-module-0:GND", "wokwi-pir-motion-sensor-0:GND", "black", [ "h0" ] ],
+    [ "wokwi-pir-motion-sensor-0:OUT", "pico:GP8", "green", [ "v0" ] ],
+    [ "wokwi-relay-module-0:IN", "pico:GP9", "green", [ "h0" ] ],
+    [ "oled1:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "oled1:GND", "pico:GND.7", "black", [ "v0" ] ],
+    [ "pico:VBUS", "oled1:VCC", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
