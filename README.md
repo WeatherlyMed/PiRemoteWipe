@@ -1,5 +1,8 @@
 # PiRemoteWipe
 This project aims to allow you to remotely wipe a raspberry pi so that it can be installed in a inviroment where it cannot be recovered from without risking the safety of user.
+
+![IMG_20240819_171411741 (1)](https://github.com/user-attachments/assets/49817168-1072-48e3-b8d6-7cf3415c618d)
+
 wire your gpio, relay and sd card
 Gpio connects to relay
 relay acts as power switch for + voltage and ground is made common between power source and pi
